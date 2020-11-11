@@ -3,14 +3,14 @@ import { Link } from 'gatsby'
 import { Layout } from '../components'
 import '../styles/index.scss'
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout>
-    <h1>Hello</h1>
-    <h2>My name is Christos</h2>
+    <h1>About me</h1>
+    <p>Christos is a lot of things, described here</p>
     <p>
       Need a dev? <Link to="/contact">Contact me</Link>
     </p>
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage
