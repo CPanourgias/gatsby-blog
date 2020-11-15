@@ -7,7 +7,25 @@
 module.exports = {
   siteMetadata: {
     title: 'My Personal Blog Page',
-    author: 'Christos Panourgias'
+    author: 'Christos Panourgias',
   },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
 }
